@@ -1,0 +1,13 @@
+{
+  "name": "historian",
+  "version": "0.1.0",
+  "author": "Luke Arduini <luke.arduini@me.com>",
+  "dependencies": {
+    "request": "*",
+    "director": "*"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.6.0"
+  }
+}

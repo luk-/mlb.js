@@ -1,4 +1,7 @@
 var request = require('request')
+  , events = require('events')
+  , util = require('util');
+
 
 exports.url = function (date) {
   if (date) {
@@ -27,15 +30,24 @@ exports.url = function (date) {
     return url;
 }
 
-exports.get_grid = function (url, cb) {
+exports.get_grid = function () {
 
-  request(url, function (err, res, body) {
-    if (err) {
-      return console.err(err);
-    }
-    else {
-      cb(body);
-    }
-  });
+//  events.EventEmitter.call(this);
 
+  this.grid = function (url) {
+  var self = this;
+
+    request(url, function (err, res, body) {
+
+      if (err) {
+	return console.err(err);
+      }
+      else {
+	self.emit('data', body);
+      }
+
+    });
+  }
 }
+
+util.inherits(exports.get_grid, events.EventEmitter);
