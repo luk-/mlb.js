@@ -1,6 +1,6 @@
 var grid = require('./grid');
 
-function grid_parse(json) {
+function grid_parse (json) {
 
   try {
     var obj = JSON.parse(json);
@@ -22,14 +22,28 @@ function grid_parse(json) {
     }
   });
 
-  //self.emit('data', games);
-  //console.log(obj.data.games);
-  //console.log(games);
   return games;
 
 }
 
-var get_games = function (cb) {
+function game_url (game_id, cb) {
+  var game_date = game_id.slice(0, 11);
+  var year  = game_id(0, 4);
+  var month = game_id(5, 7);
+  var day   = game_id(8, 10);
+
+  var url = [
+    '
+
+
+/*
+* @api public
+* @param optional {callback} cb
+* @param optional {date} date
+* ex: get_games(console.log, '2012, 04, 11');
+*/
+
+var get_games = function (cb, date) {
   
   var ret_grid = new grid.get_grid();
 
@@ -40,8 +54,7 @@ var get_games = function (cb) {
 
   });
 
-  ret_grid.grid(grid.url());
+  ret_grid.grid(grid.url(date));
 
 }
 
-get_games();
