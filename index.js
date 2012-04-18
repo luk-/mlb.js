@@ -13,6 +13,6 @@ var mlb = require('./lib/mlb');
 
 var game = mlb.games.url('2012/04/17/minmlb-nyamlb-1');
 
-mlb.events(game, console.log, {limit: 10});
+mlb.events(game, console.log);
 
 //mlb.games.get(console.log);
