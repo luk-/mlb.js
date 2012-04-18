@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<head>
+<title>mlb.js</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="events"></div>
+<script type="text/javascript">
+  $.get('/events', function (data) {
+      var json = JSON.parse(data);
+      json.forEach(function (val, key) {
+	document.writeln('<p>' + val['@'].des + '</p>');
+      });
+
+  });
+</script>
