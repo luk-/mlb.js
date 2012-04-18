@@ -1,13 +1,29 @@
 {
   "name": "mlb",
   "version": "0.0.1",
-  "author": "Luke Arduini <luke.arduini@me.com>",
+  "main": "lib/mlb.js",
+  "keywords": [
+    "baseball",
+    "api",
+    "major",
+    "league",
+    "blernsball"
+  ],
+  "directories": {
+    "lib": "lib",
+    "example": "example",
+    "test": "test"
+  },
   "dependencies": {
     "request": "2.9.x",
-    "xml2js": "0.1.x"
+    "xml2js": "0.1.x",
+  },
+  "devDependencies": {
+    "tap": "0.2.x"
   },
   "license": "MIT",
   "engines": {
     "node": ">=0.6.0"
-  }
+  },
+  "author": "Luke Arduini <luke.arduini@me.com>",
 }
