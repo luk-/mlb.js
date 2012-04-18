@@ -14,9 +14,12 @@
     "example": "example",
     "test": "test"
   },
+  "scripts": {
+    "test": "tap test/*.js"
+  },
   "dependencies": {
     "request": "2.9.x",
-    "xml2js": "0.1.x",
+    "xml2js": "0.1.x"
   },
   "devDependencies": {
     "tap": "0.2.x"
@@ -25,5 +28,5 @@
   "engines": {
     "node": ">=0.6.0"
   },
-  "author": "Luke Arduini <luke.arduini@me.com>",
+  "author": "Luke Arduini <luke.arduini@me.com>"
 }
