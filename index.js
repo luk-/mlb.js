@@ -3,7 +3,7 @@ var mlb = require('./lib/mlb');
 
 //mlb.games.get(console.log, '2012, 04, 16');
 
-//mlb.games.get(console.log);
+mlb.games.get();
 
 //var game = mlb.games.url('2012/04/16/balmlb-chamlb-1');
 
@@ -11,8 +11,8 @@ var mlb = require('./lib/mlb');
 
 //console.log(game);
 
-var game = mlb.games.url('2012/04/17/minmlb-nyamlb-1');
+//var game = mlb.games.url('2012/04/17/minmlb-nyamlb-1');
 
-mlb.events(game, console.log);
+//mlb.events(game, console.log);
 
 //mlb.games.get(console.log);
