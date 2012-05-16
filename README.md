@@ -78,7 +78,7 @@ Description: Brandon Snyder homers (3) on a fly ball to left field.
 Time: 2012-05-16T02:41:43Z
 ```
 
-But I need the sports score!
+But I need the sports score so I can find out who won the game and support my TEEEEAM!
 
 ```
 mlb.score(game, function (err, res) {
