@@ -22,7 +22,8 @@
     "xml2js": "0.1.x"
   },
   "devDependencies": {
-    "tap": "0.2.x"
+    "tap": "0.2.x",
+    "nock": "0.13.0"
   },
   "license": "MIT",
   "engines": {
