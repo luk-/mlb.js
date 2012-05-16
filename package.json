@@ -1,5 +1,6 @@
 {
   "name": "mlb",
+  "description": "unofficial major league sportsball api fun!",
   "version": "0.0.1",
   "main": "lib/mlb.js",
   "keywords": [
