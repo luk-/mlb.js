@@ -4,6 +4,10 @@
 
 Find all your favorite blernsball sportsball scores and events and games and schedule!
 
+**Installation**
+
+`npm install mlb`
+
 Mlb.js has many features useful for finding out sportsball fun facts, such as:
 
 **Schedules!**
@@ -92,7 +96,12 @@ Output:
 { Rangers: '4', Royals: '7' }
 ```
 
+Tests:
+
+`npm test`
+
+
 SPORTS ARE FINALLY FUN
 
 
-##license: MIT
+###license: MIT
