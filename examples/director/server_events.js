@@ -37,7 +37,7 @@ function game_events() {
     }
     else {
       self.res.writeHead(200, { 'Content-Type': 'text/html' })
-      self.res.end(JSON.stringify(body))
+      self.res.end(JSON.stringify(res))
     }
     
   }, {limit: 10})
