@@ -8,6 +8,10 @@ Find all your favorite blernsball sportsball scores and events and games and sch
 
 `npm install mlb`
 
+Then in your code:
+
+`var mlb = require('mlb')`
+
 Mlb.js has many features useful for finding out sportsball fun facts, such as:
 
 **Schedules!**
