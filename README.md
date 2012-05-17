@@ -2,6 +2,8 @@
 
 ##major league blernsball!
 
+[![Build Status](https://secure.travis-ci.org/st-luke/mlb.js.png)](http://travis-ci.org/st-luke/mlb.js)
+
 Find all your favorite blernsball sportsball scores and events and games and schedule!
 
 **Installation**
