@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>mlb.js by st-luke</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>mlb.js</h1>
+        <p>major league SPORTSBALL</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/st-luke/mlb.js" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/st-luke/mlb.js/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/st-luke/mlb.js/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h1>mlb.js</h1>
+
+<h2>major league blernsball!</h2>
+
+<p><a href="http://travis-ci.org/st-luke/mlb.js"><img src="https://secure.travis-ci.org/st-luke/mlb.js.png" alt="Build Status"></a></p>
+
+<p>Find all your favorite blernsball sportsball scores and events and games and schedule!</p>
+
+<p><strong>Installation</strong></p>
+
+<p><code>npm install mlb</code></p>
+
+<p>Then in your code:</p>
+
+<p><code>var mlb = require('mlb')</code></p>
+
+<p>Mlb.js has many features useful for finding out sportsball fun facts, such as:</p>
+
+<p><strong>Schedules!</strong></p>
+
+<p>You can get some sweet SPORTS object of current games using <code>mlb.games.get</code></p>
+
+<p>Ex:</p>
+
+<div class="highlight">
+<pre><span class="nx">mlb</span><span class="p">.</span><span class="nx">games</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span>
+<span class="p">})</span>
+</pre>
+</div>
+
+
+<p>Or give it a date:</p>
+
+<pre><code>mlb.games.get(function (err, res) {
+  console.log(res)
+}, '2012, 05, 14')
+</code></pre>
+
+<p>Output (truncated):</p>
+
+<div class="highlight">
+<pre><span class="p">{</span> <span class="s1">'2012/05/15/houmlb-phimlb-1'</span><span class="o">:</span> 
+   <span class="p">{</span> <span class="nx">home</span><span class="o">:</span> <span class="s1">'Phillies'</span><span class="p">,</span>
+     <span class="nx">away</span><span class="o">:</span> <span class="s1">'Astros'</span><span class="p">,</span>
+     <span class="nx">field</span><span class="o">:</span> <span class="s1">'Citizens Bank Park'</span><span class="p">,</span>
+     <span class="nx">time</span><span class="o">:</span> <span class="s1">'1:05 PM'</span><span class="p">,</span>
+     <span class="nx">status</span><span class="o">:</span> <span class="s1">'Final'</span> <span class="p">},</span>
+  <span class="s1">'2012/05/15/sdnmlb-wasmlb-1'</span><span class="o">:</span> 
+   <span class="p">{</span> <span class="nx">home</span><span class="o">:</span> <span class="s1">'Nationals'</span><span class="p">,</span>
+     <span class="nx">away</span><span class="o">:</span> <span class="s1">'Padres'</span><span class="p">,</span>
+     <span class="nx">field</span><span class="o">:</span> <span class="s1">'Nationals Park'</span><span class="p">,</span>
+     <span class="nx">time</span><span class="o">:</span> <span class="s1">'1:05 PM'</span><span class="p">,</span>
+     <span class="nx">status</span><span class="o">:</span> <span class="s1">'Final'</span> <span class="p">},</span>
+  <span class="s1">'2012/05/15/clemlb-minmlb-1'</span><span class="o">:</span> 
+   <span class="p">{</span> <span class="nx">home</span><span class="o">:</span> <span class="s1">'Twins'</span><span class="p">,</span>
+     <span class="nx">away</span><span class="o">:</span> <span class="s1">'Indians'</span><span class="p">,</span>
+     <span class="nx">field</span><span class="o">:</span> <span class="s1">'Target Field'</span><span class="p">,</span>
+     <span class="nx">time</span><span class="o">:</span> <span class="s1">'1:10 PM'</span><span class="p">,</span>
+     <span class="nx">status</span><span class="o">:</span> <span class="s1">'Final'</span> <span class="p">}</span> <span class="p">}</span>
+</pre>
+</div>
+
+
+<p>Neat!</p>
+
+<p>Want some other blernsball sportsball details? OK!</p>
+
+<p>Gonna need to parse that game ID first:</p>
+
+<p><code>var game = mlb.games.url('2012/05/15/kcamlb-texmlb-1')</code></p>
+
+<p>OK we're ready for some more SPOOOORTS!</p>
+
+<div class="highlight">
+<pre><span class="nx">mlb</span><span class="p">.</span><span class="nx">events</span><span class="p">(</span><span class="nx">game</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">body</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">res</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">val</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Event: '</span> <span class="o">+</span> <span class="nx">val</span><span class="p">[</span><span class="s1">'@'</span><span class="p">].</span><span class="nx">event</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Description: '</span> <span class="o">+</span> <span class="nx">val</span><span class="p">[</span><span class="s1">'@'</span><span class="p">].</span><span class="nx">des</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Time: '</span> <span class="o">+</span> <span class="nx">val</span><span class="p">[</span><span class="s1">'@'</span><span class="p">].</span><span class="nx">start_tfs_zulu</span> <span class="o">+</span> <span class="s1">'\n'</span><span class="p">)</span>
+  <span class="p">})</span>
+<span class="p">},</span> <span class="p">{</span><span class="nx">limit</span><span class="o">:</span> <span class="mi">2</span><span class="p">})</span>
+</pre>
+</div>
+
+
+<p>Output:</p>
+
+<pre><code>Event: Groundout
+Description: Elvis Andrus grounds out, shortstop Alcides Escobar to first baseman Eric Hosmer.  
+Time: 2012-05-16T02:46:42Z
+
+Event: Home Run
+Description: Brandon Snyder homers (3) on a fly ball to left field.  
+Time: 2012-05-16T02:41:43Z
+</code></pre>
+
+<p>But I need the sports score so I can find out who won the game and support my TEEEEAM!</p>
+
+<pre><code>mlb.score(game, function (err, res) {
+  console.log(res)
+})
+</code></pre>
+
+<p>Output:</p>
+
+<pre><code>{ Rangers: '4', Royals: '7' }
+</code></pre>
+
+<p>Tests:</p>
+
+<p><code>npm test</code></p>
+
+<p>SPORTS ARE FINALLY FUN</p>
+
+<h3>license: MIT</h3>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/st-luke">st-luke</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+    
+  </body>
+</html>
