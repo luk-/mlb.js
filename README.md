@@ -1,3 +1,8 @@
+### **notice:** 
+It looks like since baseball is over, the XML data this relies on was removed
+from the web so this will no longer function. Once they put up their new back end
+for next year's season, I'll see if I can do this again (and better).
+
 #mlb.js
 
 ##major league blernsball!
